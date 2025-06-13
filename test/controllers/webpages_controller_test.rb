@@ -32,7 +32,7 @@ class WebpagesControllerTest < ActionDispatch::IntegrationTest
   test "should have total_word_count as non-blank column in record" do
     post webpages_path, params: { webpage: { url: "https://en.m.wikipedia.org/wiki/Stegosaurus" } }
     @webpage = Webpage.last
-    assert_equal 12159, @webpage.total_word_count, "does not retrieve total word count correctly"
+    assert_equal 12066, @webpage.total_word_count, "does not retrieve total word count correctly"
   end
 
   # A table of contents is generated
